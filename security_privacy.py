@@ -20,4 +20,11 @@ if __name__ == '__main__':
 	# returns a string that is difficult to parse.
 	security_privacy_plist.update({'LocationServiceAccess': location_service_access.stdout.decode('utf-8')})
 
+	# 5.15 Require an administrator password to access system-wide preferences (Scored)
+	system_preferences = subprocess.Popen('security authorizationdb read system.preferences 2> /dev/null | '
+	                                      'grep -A1 shared | grep -E "(true|false)"',
+	                                      stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
+	system_preferences_out = system_preferences.communicate()
+	security_privacy_plist.update({'SecurityAuthorization': system_preferences_out[0].decode('utf-8').rstrip("\n")[2:6]})
+
 	main.plist_create(security_privacy_plist, "/tmp/SecurityAndPrivacy.plist")

@@ -12,5 +12,10 @@ if __name__ == '__main__':
 		energy_saver_plist.update({'WakeForNetworkAccess': 0})
 	if "womp                 1" in wake_status.stdout.decode('utf-8'):
 		energy_saver_plist.update({'WakeForNetworkAccess': 1})
+	# 5.14 Ensure system is set to hibernate (Scored)
+	hibernate = subprocess.Popen('pmset -g | egrep standbydelay', stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+	                             shell=True)
+	hibernate_out = hibernate.communicate()
+	energy_saver_plist.update({'HibernateDelay': hibernate_out[0].decode('utf-8').rstrip("\n")})
 
 	main.plist_create(energy_saver_plist, "/tmp/EnergySaver.plist")
