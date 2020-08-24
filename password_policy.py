@@ -8,7 +8,7 @@ if __name__ == '__main__':
 	password_policy_plist = {}
 
 	# 5.2.1 Configure account lockout threshold (Scored)
-	failed_logins = subprocess.Popen(" pwpolicy -getaccountpolicies | "
+	failed_logins = subprocess.Popen("pwpolicy -getaccountpolicies | "
 	                                 "grep -A 1 'policyAttributeMaximumFailedAuthentications' | "
 	                                 "tail -1 | cut -d'>' -f2 | cut -d '<' -f1" ,
 	                                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
