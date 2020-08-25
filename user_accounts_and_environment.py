@@ -64,9 +64,8 @@ if __name__ == '__main__':
 		accounts_and_environment_plist.update({'PlugInFirstVisitPolicy': "PlugInFirstVisitPolicy"})
 	else:
 		accounts_and_environment_plist.update({'PlugInFirstVisitPolicy': "Not Found"})
-	print(plugin_first_visit_out)
 
-	print(accounts_and_environment_plist)
+	main.plist_create(accounts_and_environment_plist, '/tmp/AccountsAndEnvironment.plist')
 
 
 
