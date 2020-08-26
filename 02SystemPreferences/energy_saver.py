@@ -1,5 +1,5 @@
 import subprocess
-import main
+import shared
 
 # 2.5 Energy Saver
 # This section contains recommendations related to the configurable items under the Energy Saver panel
@@ -18,4 +18,4 @@ if __name__ == '__main__':
 	hibernate_out = hibernate.communicate()
 	energy_saver_plist.update({'HibernateDelay': hibernate_out[0].decode('utf-8').rstrip("\n")})
 
-	main.plist_create(energy_saver_plist, "/tmp/EnergySaver.plist")
+	shared.plist_create(energy_saver_plist, "/tmp/EnergySaver.plist")

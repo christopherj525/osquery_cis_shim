@@ -1,5 +1,5 @@
 import subprocess
-import main
+import shared
 
 # 2.9 Pair the remote control infrared receiver if enabled (Scored)
 
@@ -19,4 +19,4 @@ if __name__ == '__main__':
 	else:
 		infrared_remote_plist.update({'IRReciever': 'Off'})
 
-	main.plist_create(infrared_remote_plist, "/tmp/InfraredReceiver.plist")
+	shared.plist_create(infrared_remote_plist, "/tmp/InfraredReceiver.plist")

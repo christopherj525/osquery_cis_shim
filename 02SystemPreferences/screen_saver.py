@@ -1,4 +1,4 @@
-import main
+import shared
 import subprocess
 
 
@@ -34,7 +34,4 @@ if __name__ == '__main__':
 	# 2.3.3 Familiarize users with screen lock tools or corner to Start Screen Saver (Not Scored)
 	# This is user training only.
 
-	# 2.3.4 Ensure Password is enabled when screen saver activates
-	# Not a CIS Benchmark for OSX but it is implied by the previous Benchmarks but not explicitly defined.
-
-	main.plist_create(screen_saver_plist, "/tmp/ScreenSaver.plist")
+	shared.plist_create(screen_saver_plist, "/tmp/ScreenSaver.plist")

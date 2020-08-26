@@ -1,6 +1,6 @@
 import subprocess
 import re
-import main
+import shared
 
 # 5.2 Password Management
 
@@ -80,4 +80,4 @@ if __name__ == '__main__':
 	else:
 		password_policy_plist.update({'DifferFromPast': 0})
 
-	main.plist_create(password_policy_plist, '/tmp/PasswordPolicy.plist')
+	shared.plist_create(password_policy_plist, '/tmp/PasswordPolicy.plist')

@@ -1,5 +1,5 @@
 import subprocess
-import main
+import shared
 
 
 if __name__ == '__main__':
@@ -25,4 +25,4 @@ if __name__ == '__main__':
 	fast_user_switching = subprocess.run(['defaults', 'read', '/Library/Preferences/.GlobalPreferences',
 	                                      'MultipleSessionEnabled'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 	users_accounts_plist.update({'FastUserSwitching': bool(fast_user_switching.stdout.decode('utf-8'))})
-	main.plist_create(users_accounts_plist, '/tmp/UserAccounts.plist')
+	shared.plist_create(users_accounts_plist, '/tmp/UserAccounts.plist')

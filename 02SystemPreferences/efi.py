@@ -1,5 +1,5 @@
 import subprocess
-import main
+import shared
 
 # 2.13 Ensure EFI version is valid and being regularly checked (Scored)
 
@@ -12,4 +12,4 @@ if __name__ == '__main__':
 	else:
 		efi_plist.update({'IntegrityCheck': 'Check EFI integrity'})
 
-	main.plist_create(efi_plist, '/tmp/EFI.plist')
+	shared.plist_create(efi_plist, '/tmp/EFI.plist')

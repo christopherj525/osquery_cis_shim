@@ -1,5 +1,5 @@
 import subprocess
-import main
+import shared
 
 # 3 Logging and Auditing
 
@@ -24,4 +24,4 @@ if __name__ == '__main__':
 	else:
 		audit_plist.update({'InstallLogRetention': 0})
 
-	main.plist_create(audit_plist, '/tmp/LoggingAuditing.plist')
+	shared.plist_create(audit_plist, '/tmp/LoggingAuditing.plist')

@@ -1,5 +1,5 @@
 import subprocess
-import main
+import shared
 import os
 
 if __name__ == '__main__':
@@ -22,4 +22,4 @@ if __name__ == '__main__':
 		ntp_offset = subprocess.run(['sudo', 'sntp', '-Ss', '-M', '128', str(date_time_plist['NTPServer'])],
 		                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 		date_time_plist.update({'NTPOffset': ntp_offset.stdout.decode('utf-8')[97:-61]})
-	main.plist_create(date_time_plist, "/tmp/DateTime.plist")
+	shared.plist_create(date_time_plist, "/tmp/DateTime.plist")

@@ -1,5 +1,5 @@
 import subprocess
-import main
+import shared
 
 # 4 Network Configurations
 
@@ -33,4 +33,4 @@ if __name__ == '__main__':
 
 	nfs_server_export = subprocess.run(['cat', '/etc/exports'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 	network_configurations_plist.update({'NFSServerExport': nfs_server_export.stdout.decode('utf-8').rstrip("\n")})
-	main.plist_create(network_configurations_plist, '/tmp/NetworkCgti onfiguration.plist')
+	shared.plist_create(network_configurations_plist, '/tmp/NetworkCgti onfiguration.plist')

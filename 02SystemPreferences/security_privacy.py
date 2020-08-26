@@ -1,5 +1,5 @@
 import subprocess
-import main
+import shared
 
 # 2.6 Security & Privacy
 # This section contains recommendations for configurable options under the Security & Privacy panel.
@@ -27,4 +27,4 @@ if __name__ == '__main__':
 	system_preferences_out = system_preferences.communicate()
 	security_privacy_plist.update({'SecurityAuthorization': system_preferences_out[0].decode('utf-8').rstrip("\n")[2:6]})
 
-	main.plist_create(security_privacy_plist, "/tmp/SecurityAndPrivacy.plist")
+	shared.plist_create(security_privacy_plist, "/tmp/SecurityAndPrivacy.plist")

@@ -1,4 +1,4 @@
-import main
+import shared
 import subprocess
 
 if __name__ == '__main__':
@@ -21,6 +21,6 @@ if __name__ == '__main__':
 		bluetooth_plist.update({'BluetoothMenu': 1})
 	else:
 		bluetooth_plist.update({'BluetoothMenu': 0})
-	main.plist_create(bluetooth_plist, "/tmp/Bluetooth.plist")
+	shared.plist_create(bluetooth_plist, "/tmp/Bluetooth.plist")
 
 

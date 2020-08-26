@@ -1,4 +1,4 @@
-import main
+import shared
 import subprocess
 
 if __name__ == '__main__':
@@ -22,4 +22,4 @@ if __name__ == '__main__':
 	                                        stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 	keychain_plist.update({'TrustOCSP': certificate_check_OCSP.stdout.decode('utf-8').rstrip("\n")})
 
-	main.plist_create(keychain_plist, "/tmp/Keychain.plist")
+	shared.plist_create(keychain_plist, "/tmp/Keychain.plist")

@@ -1,5 +1,5 @@
 import subprocess
-import main
+import shared
 
 if __name__ == '__main__':
 	# 5.23 System Integrity Protection status (Scored)
@@ -8,4 +8,4 @@ if __name__ == '__main__':
 	                                         stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 	system_integrity_plist.update(
 		{'SystemIntegrityStatus': system_integrity_status.stdout.decode('utf-8').rstrip("\n")[36:-1]})
-	main.plist_create(system_integrity_plist, '/tmp/SystemIntegrity.plist')
+	shared.plist_create(system_integrity_plist, '/tmp/SystemIntegrity.plist')
