@@ -1,5 +1,5 @@
 import subprocess
-import shared
+from CIStoPLIST import shared
 
 # 2.11 Java 6 is not the default Java runtime (Scored)
 

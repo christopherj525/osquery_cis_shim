@@ -1,5 +1,5 @@
 import subprocess
-import shared
+from CIStoPLIST import shared
 
 # 2.5 Energy Saver
 # This section contains recommendations related to the configurable items under the Energy Saver panel

@@ -1,5 +1,5 @@
 import subprocess
-import shared
+from CIStoPLIST import shared
 import os
 
 if __name__ == '__main__':

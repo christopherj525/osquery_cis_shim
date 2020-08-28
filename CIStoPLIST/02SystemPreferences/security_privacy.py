@@ -1,5 +1,5 @@
 import subprocess
-import shared
+from CIStoPLIST import shared
 
 # 2.6 Security & Privacy
 # This section contains recommendations for configurable options under the Security & Privacy panel.

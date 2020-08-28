@@ -1,6 +1,6 @@
 import subprocess
 import re
-import shared
+from CIStoPLIST import shared
 
 # 5.2 Password Management
 

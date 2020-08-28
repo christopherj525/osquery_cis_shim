@@ -1,4 +1,4 @@
-import shared
+from CIStoPLIST import shared
 import subprocess
 
 if __name__ == '__main__':

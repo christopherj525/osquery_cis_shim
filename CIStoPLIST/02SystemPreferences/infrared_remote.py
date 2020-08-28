@@ -1,5 +1,5 @@
 import subprocess
-import shared
+from CIStoPLIST import shared
 
 # 2.9 Pair the remote control infrared receiver if enabled (Scored)
 

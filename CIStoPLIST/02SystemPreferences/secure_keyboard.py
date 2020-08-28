@@ -1,5 +1,5 @@
 import subprocess
-import shared
+from CIStoPLIST import shared
 
 # 2.10 Enable Secure Keyboard Entry in terminal.app (Scored)
 if __name__ == '__main__':

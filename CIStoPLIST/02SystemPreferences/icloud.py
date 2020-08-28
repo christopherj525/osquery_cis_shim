@@ -1,4 +1,4 @@
-import shared
+from CIStoPLIST import shared
 from pathlib import Path
 
 # 2.7 iCloud

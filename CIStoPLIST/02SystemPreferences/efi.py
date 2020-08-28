@@ -1,5 +1,5 @@
 import subprocess
-import shared
+from CIStoPLIST import shared
 
 # 2.13 Ensure EFI version is valid and being regularly checked (Scored)
 

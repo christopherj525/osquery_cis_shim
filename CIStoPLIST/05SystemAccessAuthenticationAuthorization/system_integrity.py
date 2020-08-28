@@ -1,5 +1,5 @@
 import subprocess
-import shared
+from CIStoPLIST import shared
 
 if __name__ == '__main__':
 	# 5.23 System Integrity Protection status (Scored)

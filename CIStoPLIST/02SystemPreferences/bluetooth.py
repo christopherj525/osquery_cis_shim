@@ -1,11 +1,11 @@
-import shared
+from CIStoPLIST import shared
 import subprocess
 
 if __name__ == '__main__':
 	# 2.1.1 Turn off Bluetooth, if no paired devices exist (Scored)
 	bluetooth_plist = {}
 	Bluetooth = "/Library/Preferences/com.apple.Bluetooth.plist", 'ControllerPowerState'
-	bluetooth_plist.update(main.plist_value(Bluetooth[0], Bluetooth[1]))
+	bluetooth_plist.update(shared.plist_value(Bluetooth[0], Bluetooth[1]))
 	if bluetooth_plist['ControllerPowerState'] == 1:
 		bt_power_state = subprocess.run(['system_profiler', 'SPBluetoothDataType'],
 		                                stdout=subprocess.PIPE, stderr=subprocess.STDOUT)

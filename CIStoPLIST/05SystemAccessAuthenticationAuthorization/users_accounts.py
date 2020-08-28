@@ -1,6 +1,5 @@
 import subprocess
-import shared
-
+from CIStoPLIST import shared
 
 if __name__ == '__main__':
 	# 5.11 Do not enable the "root" account (Scored)

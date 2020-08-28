@@ -1,4 +1,4 @@
-import shared
+from CIStoPLIST import shared
 import subprocess
 
 
