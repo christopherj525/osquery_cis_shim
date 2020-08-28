@@ -4,10 +4,10 @@ This repository is part of a larger work which is evaluating the efficacy of usi
 
 Full paper can be found here: <Insert Link>
 
-###`CIStoPLIST` 
+### `CIStoPLIST` 
 A series of scripts that are designed to pull system states defined by CIS benchmarks and place them into PLIST files which are readable by Osquery.
 
-###`OsqueryFleetConfigs`
+### `OsqueryFleetConfigs`
 These conf files can be imported into fleet using the fleetctl command, and will run the full set of CIS Benchmarks for MacOS.
 
 ### `User` or `System`
