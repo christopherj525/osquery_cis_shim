@@ -25,6 +25,7 @@ if __name__ == '__main__':
 	                                      'grep -A1 shared | grep -E "(true|false)"',
 	                                      stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
 	system_preferences_out = system_preferences.communicate()
-	security_privacy_plist.update({'SecurityAuthorization': system_preferences_out[0].decode('utf-8').rstrip("\n")[2:6]})
+	security_privacy_plist.update(
+		{'SecurityAuthorization': system_preferences_out[0].decode('utf-8').rstrip("\n")[2:6]})
 
 	shared.plist_create(security_privacy_plist, "/tmp/SecurityAndPrivacy.plist")

@@ -12,7 +12,7 @@ if __name__ == '__main__':
 	# 2.7.4 iCloud Drive Document sync (Scored)
 	# 2.7.5 iCloud Drive Desktop sync (Scored)
 
-	icloud_settings = main.plist_value(str(Path.home()) + '/Library/Preferences/MobileMeAccounts.plist', 'Accounts')
+	icloud_settings = shared.plist_value(str(Path.home()) + '/Library/Preferences/MobileMeAccounts.plist', 'Accounts')
 
 
 	for i in icloud_settings['Accounts'][0]['Services']:
