@@ -9,3 +9,5 @@ if __name__ == '__main__':
 	system_integrity_plist.update(
 		{'SystemIntegrityStatus': system_integrity_status.stdout.decode('utf-8').rstrip("\n")[36:-1]})
 	shared.plist_create(system_integrity_plist, '/tmp/SystemIntegrity.plist')
+
+
