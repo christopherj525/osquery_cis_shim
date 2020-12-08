@@ -21,5 +21,9 @@ def plist_create(dict_of_plist_key_values, out_file):
     :return: None
     """
     with open(out_file, 'wb') as fp:
-        plistlib.dump(dict_of_plist_key_values, fp)
+        try:
+            plistlib.dump(dict_of_plist_key_values, fp)
+        except TypeError:
+            print("something went wrong writing the dictionary to the plist file in line 23 shared.py")
+            pass
     return None
